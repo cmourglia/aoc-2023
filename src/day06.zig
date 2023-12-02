@@ -1,4 +1,6 @@
 const std = @import("std");
+const testing = std.testing;
+
 const Allocator = std.mem.Allocator;
 const List = std.ArrayList;
 const Map = std.AutoHashMap;
@@ -10,8 +12,37 @@ const gpa = util.gpa;
 
 const data = @embedFile("data/day06.txt");
 
+fn part1(input: []const u8) ![]const u8 {
+    _ = input;
+    return "";
+}
+
+fn part2(input: []const u8) ![]const u8 {
+    _ = input;
+    return "";
+}
+
+// zig test src/day06.zig --test-filter part1
+test "part1" {
+    const test_data =
+        \\TEST_DATA
+    ;
+    const expected = "TODO";
+    try testing.expectEqualSlices(u8, expected, try part1(test_data));
+}
+
+// zig test src/day06.zig --test-filter part2
+test "part2" {
+    const test_data =
+        \\TEST_DATA
+    ;
+    const expected = "TODO";
+    try testing.expectEqualSlices(u8, expected, try part2(test_data));
+}
+
 pub fn main() !void {
-    
+    print("Part1: {s}\n", .{try part1(data)});
+    print("Part2: {s}\n", .{try part2(data)});
 }
 
 // Useful stdlib functions
