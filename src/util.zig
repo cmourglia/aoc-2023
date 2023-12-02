@@ -10,6 +10,9 @@ var gpa_impl = std.heap.GeneralPurposeAllocator(.{}){};
 pub const gpa = gpa_impl.allocator();
 
 // Add utility functions here
+pub fn range(len: usize) []const u0 {
+    return @as([*]u0, undefined)[0..len];
+}
 
 // Useful stdlib functions
 const tokenizeAny = std.mem.tokenizeAny;
