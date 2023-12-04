@@ -12,14 +12,14 @@ const gpa = util.gpa;
 
 const data = @embedFile("data/day22.txt");
 
-fn part1(input: []const u8) ![]const u8 {
+fn part1(input: []const u8) !i32 {
     _ = input;
-    return "";
+    return -1;
 }
 
-fn part2(input: []const u8) ![]const u8 {
+fn part2(input: []const u8) !i32 {
     _ = input;
-    return "";
+    return -1;
 }
 
 // zig test src/day22.zig --test-filter part1
@@ -27,7 +27,7 @@ test "part1" {
     const test_data =
         \\TEST_DATA
     ;
-    const expected = "TODO";
+    const expected = std.math.maxInt();
     try testing.expectEqualSlices(u8, expected, try part1(test_data));
 }
 
@@ -36,13 +36,13 @@ test "part2" {
     const test_data =
         \\TEST_DATA
     ;
-    const expected = "TODO";
+    const expected = std.math.maxInt();
     try testing.expectEqualSlices(u8, expected, try part2(test_data));
 }
 
 pub fn main() !void {
-    print("Part1: {s}\n", .{try part1(data)});
-    print("Part2: {s}\n", .{try part2(data)});
+    print("Part1: {}\n", .{try part1(data)});
+    print("Part2: {}\n", .{try part2(data)});
 }
 
 // Useful stdlib functions
