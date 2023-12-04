@@ -21,6 +21,15 @@ pub fn abs(n: i32) i32 {
     return n;
 }
 
+pub fn contains(comptime T: type, list: *List(T), value: T) bool {
+    for (list.items) |item| {
+        if (item == value) {
+            return true;
+        }
+    }
+    return false;
+}
+
 // Useful stdlib functions
 const tokenizeAny = std.mem.tokenizeAny;
 const tokenizeSeq = std.mem.tokenizeSequence;
