@@ -28,7 +28,7 @@ test "part1" {
         \\TEST_DATA
     ;
     const expected = std.math.maxInt();
-    try testing.expectEqualSlices(u8, expected, try part1(test_data));
+    try testing.expectEqual(expected, try part1(test_data));
 }
 
 // zig test src/day07.zig --test-filter part2
@@ -37,7 +37,7 @@ test "part2" {
         \\TEST_DATA
     ;
     const expected = std.math.maxInt();
-    try testing.expectEqualSlices(u8, expected, try part2(test_data));
+    try testing.expectEqual(expected, try part2(test_data));
 }
 
 pub fn main() !void {
