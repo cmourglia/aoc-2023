@@ -14,6 +14,13 @@ pub fn range(len: usize) []const u0 {
     return @as([*]u0, undefined)[0..len];
 }
 
+pub fn abs(n: i32) i32 {
+    if (n < 0) {
+        return -n;
+    }
+    return n;
+}
+
 // Useful stdlib functions
 const tokenizeAny = std.mem.tokenizeAny;
 const tokenizeSeq = std.mem.tokenizeSequence;
